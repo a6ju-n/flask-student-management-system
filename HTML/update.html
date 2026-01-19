@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            form
+            {
+                width: 300px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #000000;
+                border-radius: 10px; 
+                background: rgb(141, 141, 238);
+                color: rgb(0, 0, 0);
+
+            }
+            body
+            {
+              background-color: #BDDDFC;
+                
+                
+            }
+            h2{
+                -webkit-text-stroke:  .5px rgb(70, 61, 11);
+            }
+        </style>
+        <title>Data Entry</title>
+    </head>
+    <body align="center" bgcolor="grey">
+        <br><br>
+        <H2>STUDENT DETAILS ENTRY</H2>
+        <br><br>
+        
+<form method="POST" action="{{ url_for('update',id=id ) }}">
+    
+    ID <br>
+    <input type="number" name="Id" value="{{ students[0] }}" readonly><br><br>
+
+    Name <br>
+    <input type="text" name="nme" value="{{ students[1] }}" required><br><br>
+
+    Dept <br>
+    <input type="text" name="dept" value="{{ students[2] }}" required><br><br>
+
+    Mark <br>
+    <input type="number" name="mark" value="{{ students[3] }}" required><br><br>
+
+    Student password <br>
+    <input type="text" name="pwd" value="{{ students[4] }}" required><br><br>
+
+    <button type="submit">SUBMIT</button>
+   
+</form>
+
+    </body>
+</html>

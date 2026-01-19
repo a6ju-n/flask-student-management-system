@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title> 
+    <style>
+        body{
+            background-color: #BDDDFC;
+        }
+        table{
+            border-radius: 5px;
+            width: 500px;
+        }
+        table{
+            background-color: white;
+        }
+        th{
+            border-radius: 5px;
+            font-family:monospace;
+        }
+        td{
+            border-radius: 5px;
+            font-family:monospace;
+
+        }
+    </style>
+</head>
+<body align="center">
+<h2>Student Records</h2>
+<a href="/denter">Add Student</a> 
+<br> 
+<table border="1" align="center">
+<tr>
+    <th>ID</th><th>Name</th>
+    <th>Dept</th><th>Marks</th><th>Pass</th><th>Action</th>
+</tr>
+{% for s in students %}
+<tr>
+    <td>{{s[0]}}</td>
+    <td>{{s[1]}}</td>
+    <td>{{s[2]}}</td>
+    <td>{{s[3]}}</td>
+    <td>{{s[4]}}</td>
+    <td><a href="{{ url_for('delete', id=s[0]) }}">Delete <br></a>
+    <a href="{{ url_for('update', id=s[0]) }}">update</a></td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

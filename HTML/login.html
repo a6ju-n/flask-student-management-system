@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>LOGIN</title>
+        <script>
+           function togglePassword() {
+           const pwd = document.getElementById("password");
+ 
+           if (pwd.type === "password") {
+              pwd.type = "text";
+           } else {
+             pwd.type = "password";
+           }
+        }
+        </script>
+        <style>
+            body
+            {
+            background-color: #BDDDFC;
+                
+            }
+            form
+            {
+                width: 300px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #000000;
+                border-radius: 10px; 
+                background: rgb(141, 141, 238);
+                
+                color: rgb(0, 0, 0);
+            }
+            input
+            {
+                border-radius: 5px;
+                border-color: rgb(6, 6, 90);
+            }
+            #show
+            {
+                width: 50px;
+                border-radius: 10px;
+            }
+            a
+            {
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 10px;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <br><br><br><br><br><br><br>
+        <form action="/" method="POST"  >
+            ENTER YOUR FACULTY ID<br>
+            <input type="text" name="usr"><br><br>
+            ENTER YOUR PASSWORD <br>
+            <input type="password" name="pwd" id="password">
+            <button type="button" onclick="togglePassword()" id="show">Show</button><br><br>
+            <button type="submit">LOGIN</button><br>
+            <a href="/stud" >STUDENT LOGIN?</a>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title> 
+    <style>
+        body{
+            background-color: #BDDDFC;
+        }
+        table{
+            border-radius: 5px;
+            
+        }
+        table{
+            background-color: white;
+            font-size: 15px;
+            
+        }
+        th{
+            border-radius: 5px;
+            font-family:monospace;
+            width: 150px;
+            height: 50px;
+        }
+        td{
+            border-radius: 5px;
+            font-family:monospace;
+            width: 200px;
+
+        }
+    </style>
+</head>
+<body align="center">
+<h2>Student Records</h2>
+<br> 
+<table border="1" align="center">
+
+{% for s in students %}
+<tr>
+    <th>ID</th>
+    <td id="la">{{s[0]}}</td>
+</tr>
+<tr>
+    <th>NAME</th>
+    <td id="la">{{s[1]}}</td>
+    
+</tr>
+<tr>
+    <th>DEPARTMENT</th>
+    <td id="la">{{s[2]}}</td>
+    
+</tr>
+<tr>
+    <th>MARK</th>
+    <td id="la">{{s[3]}}</td>
+    
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
